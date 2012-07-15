@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="angular.js">
+  <template name="ngm" value="var $moduleName$ = angular.module('$moduleName$',[]);&#10;$END$" description="A new angular module without a config function" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngc" value="var $controllerName$ = function($scope) {&#10;    $END$&#10;} " description="angular.js (outside of a module)" toReformat="true" toShortenFQNames="true">
+    <variable name="controllerName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngf" value="$scope.$functionName$ = function() {&#10;    $END$&#10;}" description="A function in angular's controller" toReformat="true" toShortenFQNames="true">
+    <variable name="functionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngdl" value=".directive('$directiveName$', function($directiveDeps$) {&#10;&#10;    return function(scope, element, attrs) {&#10;        $END$&#10;    }&#10;});" description="A directive with a link function only" toReformat="true" toShortenFQNames="true">
+    <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="directiveDeps" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="sem" value="scope, element, attrs$END$" description="scope, element, attrs inside a linking function" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="lf" value="function (scope, element, attrs$ctrl$) {&#10;$END$    &#10;}" description="A link function" toReformat="true" toShortenFQNames="true">
+    <variable name="ctrl" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngdc" value=".directive('$directiveName$', function factory($injectables$) {&#10;  var directiveDefinitionObject = {   &#10;    $directiveAttrs$&#10;    compile: function compile(tElement, tAttrs, transclude) {    &#10;      $END$&#10;      return function (scope, element, attrs) {                    &#10;      }&#10;    }&#10;  };&#10;  return directiveDefinitionObject;&#10;})" description="A directive with a compile function" toReformat="true" toShortenFQNames="true">
+    <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="injectables" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="directiveAttrs" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="cf" value="function compile(tElement, tAttrs, transclude) {    &#10;      $END$&#10;      return function (scope, element, attrs) {                    &#10;      }&#10;}" description="A compile function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
+
