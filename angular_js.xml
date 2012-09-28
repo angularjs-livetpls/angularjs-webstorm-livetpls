@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="angular.js">
-  <template name="ngm" value="var $moduleName$ = angular.module('$moduleName$',[]);&#10;$END$" description="A new angular module without a config function" toReformat="true" toShortenFQNames="true">
-    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="module" value="/**&#10; * TODO: Document module $moduleName$ &#10; */&#10;angular.module('$moduleName$',[$dependencies$]);$END$" description="Define an Angular module without a config function" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="&quot;myModule&quot;" alwaysStopAt="true" />
+    <variable name="dependencies" expression="" defaultValue="&quot;dependencies&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -12,10 +13,29 @@
       <option name="JSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
     </context>
   </template>
-  <template name="ngc" value="var $controllerName$ = function($scope) {&#10;    $END$&#10;} " description="angular.js (outside of a module)" toReformat="true" toShortenFQNames="true">
-    <variable name="controllerName" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ngc" value="function $controllerName$($$scope$injectables$) {&#10;    $END$&#10;};" description="Define an Angular Controller" toReformat="false" toShortenFQNames="true">
+    <variable name="controllerName" expression="" defaultValue="&quot;MyController&quot;" alwaysStopAt="true" />
+    <variable name="injectables" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -26,10 +46,29 @@
       <option name="JSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
     </context>
   </template>
-  <template name="ngf" value="$scope.$functionName$ = function() {&#10;    $END$&#10;}" description="A function in angular's controller" toReformat="true" toShortenFQNames="true">
-    <variable name="functionName" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ngf" value="/**&#10; * TODO: Document scoped function $functionName$&#10; */&#10;$$scope.$functionName$ = function($params$) {&#10;    $END$&#10;};" description="Define a function in an Angular controller" toReformat="true" toShortenFQNames="true">
+    <variable name="functionName" expression="" defaultValue="&quot;myFunction&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -40,75 +79,293 @@
       <option name="JSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
     </context>
   </template>
-  <template name="ngdl" value=".directive('$directiveName$', function($directiveDeps$) {&#10;&#10;    return function(scope, element, attrs) {&#10;        $END$&#10;    }&#10;});" description="A directive with a link function only" toReformat="true" toShortenFQNames="true">
-    <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="directiveDeps" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ngv" value="$$scope.$variable$ = $value$;" description="Define a scope variable in an Angular controller" toReformat="true" toShortenFQNames="true">
+    <variable name="variable" expression="" defaultValue="&quot;myVariable&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="enum(&quot;null&quot;,&quot;{}&quot;,&quot;[]&quot;, &quot;\&quot;\&quot;&quot;)" defaultValue="&quot;null&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
       <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="sem" value="scope, element, attrs$END$" description="scope, element, attrs inside a linking function" toReformat="true" toShortenFQNames="true">
+  <template name="ngon" value="$$scope.$$on(&quot;$eventName$&quot;, function(event, args) {&#10;    $END$&#10;});" description="Define an Angular event listener" toReformat="false" toShortenFQNames="true">
+    <variable name="eventName" expression="" defaultValue="&quot;myEvent&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
       <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="lf" value="function (scope, element, attrs$ctrl$) {&#10;$END$    &#10;}" description="A link function" toReformat="true" toShortenFQNames="true">
-    <variable name="ctrl" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ngw" value="$$scope.$$watch('$VariableName$', function(newValue, oldValue, scope) {&#10;    if (oldValue != null &amp;&amp; newValue != null) {&#10;       $END$&#10;    }&#10;});" description="Define an Angular watch function" toReformat="false" toShortenFQNames="true">
+    <variable name="VariableName" expression="" defaultValue="&quot;myVariable&quot;" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
       <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="GROOVY_EXPRESSION" value="false" />
+      <option name="GROOVY_STATEMENT" value="false" />
+      <option name="GROOVY_DECLARATION" value="false" />
+      <option name="OGNL" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="ACTION_SCRIPT" value="false" />
+      <option name="MXML" value="false" />
+      <option name="GSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="ngdc" value="directive('$directiveName$', function factory($injectables$) {&#10;  var directiveDefinitionObject = {   &#10;    $directiveAttrs$&#10;    compile: function compile(tElement, tAttrs, transclude) {    &#10;      $END$&#10;      return function (scope, element, attrs) {                    &#10;      }&#10;    }&#10;  };&#10;  return directiveDefinitionObject;&#10;})" description="A directive with a compile function" toReformat="true" toShortenFQNames="true">
-    <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="injectables" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="directiveAttrs" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="factory" value=".factory('$serviceName$', function($$rootScope$params$) {&#10;    var $serviceName$ = {&#10;        $END$&#10;    };&#10;    return $serviceName$;&#10;})" description="Define an Angular Module Factory" toReformat="false" toShortenFQNames="true">
+    <variable name="serviceName" expression="" defaultValue="&quot;myService&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;, $http, $location&quot;" alwaysStopAt="true" />
     <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
       <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="cf" value="function compile(tElement, tAttrs, transclude) {    &#10;      $END$&#10;      return function (scope, element, attrs) {                    &#10;      }&#10;}" description="A compile function" toReformat="false" toShortenFQNames="true">
+  <template name="service" value=".service('$serviceName$', function($$rootScope$params$) {&#10;    this.$serviceFunction$ = function() {&#10;        return null;$END$&#10;    };&#10;})" description="Define an Angular Module Service" toReformat="false" toShortenFQNames="true">
+    <variable name="serviceName" expression="" defaultValue="&quot;myService&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;, $http, $location&quot;" alwaysStopAt="true" />
+    <variable name="serviceFunction" expression="" defaultValue="&quot;myServiceFunction&quot;" alwaysStopAt="true" />
     <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
       <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
       <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="filter" value=".filter('$filterName$', function() {&#10;    return function(input, value) {&#10;        return null$END$;&#10;    };&#10;})" description="Define an Angular Module Filter" toReformat="false" toShortenFQNames="true">
+    <variable name="filterName" expression="" defaultValue="&quot;myFilter&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="router" value="/**&#10; * Define Application routing table&#10; */&#10;$moduleVar$.config(['$$routeProvider', '$$locationProvider', function($$routeProvider) {&#10;&#10;    $routeProvider&#10;        .when('/$url$', {&#10;            templateUrl: '$partialUrl$', &#10;            controller: $controllerName$&#10;        })&#10;        .otherwise({redirectTo: '/$defaultUrl$'})&#10;    ;&#10;    &#10;    // Set HTML5 Mode - http://docs.angularjs.org/api/ng.$locationProvider&#10;    $$locationProvider.html5Mode($html5Mode$);&#10;    &#10;    // Prefix all route provider when cases with the following&#10;    $$locationProvider.hashPrefix(&quot;$hashPrefix$&quot;);&#10;}]);" description="Define a skeleton Angular route provider" toReformat="false" toShortenFQNames="true">
+    <variable name="moduleVar" expression="" defaultValue="&quot;myApplication&quot;" alwaysStopAt="true" />
+    <variable name="url" expression="" defaultValue="&quot;myUrl&quot;" alwaysStopAt="true" />
+    <variable name="partialUrl" expression="" defaultValue="&quot;/partial/partial.html&quot;" alwaysStopAt="true" />
+    <variable name="controllerName" expression="" defaultValue="&quot;myController&quot;" alwaysStopAt="true" />
+    <variable name="defaultUrl" expression="" defaultValue="&quot;home&quot;" alwaysStopAt="true" />
+    <variable name="html5Mode" expression="enum(&quot;true&quot;,&quot;false&quot;)" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+    <variable name="hashPrefix" expression="" defaultValue="&quot;#&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="when" value=".when('/$url$', {&#10;    templateUrl: '$partialUrl$', &#10;    controller: $controllerName$&#10;})" description="Define an Angular router when condition" toReformat="false" toShortenFQNames="true">
+    <variable name="url" expression="" defaultValue="&quot;myUrl&quot;" alwaysStopAt="true" />
+    <variable name="partialUrl" expression="" defaultValue="&quot;/partials/myPartial.html&quot;" alwaysStopAt="true" />
+    <variable name="controllerName" expression="" defaultValue="&quot;myController&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngb" value="$$scope.$$broadcast(&quot;$eventName$&quot;$eventArgs$);$END$" description="Define an Angular broadcast call" toReformat="false" toShortenFQNames="true">
+    <variable name="eventName" expression="" defaultValue="&quot;eventName&quot;" alwaysStopAt="true" />
+    <variable name="eventArgs" expression="" defaultValue="&quot;, eventArgs&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="nge" value="$$scope.$$emit(&quot;$eventName$&quot;$eventArgs$);$END$" description="Define an Angular emit call" toReformat="false" toShortenFQNames="true">
+    <variable name="eventName" expression="" defaultValue="&quot;eventName&quot;" alwaysStopAt="true" />
+    <variable name="eventArgs" expression="" defaultValue="&quot;, eventArgs&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JSP" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="SQL" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="ASPECTJ" value="false" />
+      <option name="GSP" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
