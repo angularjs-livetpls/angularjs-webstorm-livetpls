@@ -1,74 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templateSet group="Jasmine">
-  <template name="jasd" value="describe('$describe$', function() {&#10;    $END$&#10;});" description="Jasmine describe template" toReformat="true" toShortenFQNames="true">
-    <variable name="describe" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="false" />
-      <option name="HAML" value="false" />
-      <option name="OTHER" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-    </context>
-  </template>
-  <template name="jasi" value="it('$should$', function() {&#10;    $END$&#10;});" description="Jasmine it template" toReformat="true" toShortenFQNames="true">
-    <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="false" />
-      <option name="HAML" value="false" />
-      <option name="OTHER" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-    </context>
-  </template>
-  <template name="jasbi" value="beforeEach(inject(function(_$$rootScope_$other$){&#10;  $END$&#10;}));" description="beforeEach with Angular's inject" toReformat="true" toShortenFQNames="true">
-    <variable name="other" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="false" />
-      <option name="HAML" value="false" />
-      <option name="OTHER" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-    </context>
-  </template>
-  <template name="jasbm" value="beforeEach(module($moduleName$));&#10;$END$" description="beforEach with AngularJS module" toReformat="false" toShortenFQNames="true">
+<templateSet group="angularjs-module">
+  <template name="ngm" value="angular.module('$moduleName$',[$moduleDependencies$]);&#10;$END$" description="A new angular module without a config function." toReformat="true" toShortenFQNames="true">
     <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML_TEXT" value="false" />
-      <option name="HTML" value="false" />
-      <option name="XSL_TEXT" value="false" />
-      <option name="XML" value="false" />
-      <option name="CSS" value="false" />
-      <option name="JAVA_SCRIPT" value="true" />
-      <option name="JSP" value="false" />
-      <option name="HAML" value="false" />
-      <option name="OTHER" value="false" />
-      <option name="CSS_PROPERTY_VALUE" value="false" />
-      <option name="CSS_DECLARATION_BLOCK" value="false" />
-      <option name="CSS_RULESET_LIST" value="false" />
-    </context>
-  </template>
-  <template name="jasb" value="beforeEach(function(){&#10;  $END$&#10;});" description="beforeEach" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleDependencies" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -84,9 +18,83 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="jasii" value="it('$should$', inject(function($injectables$) {&#10;    $END$&#10;}));" description="Jasmine it template with injectables" toReformat="true" toShortenFQNames="true">
-    <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ngma" value="var $moduleName$ = angular.module('$moduleName$',[$moduleDeps$]);&#10;$END$" description="A new angular module without a config function and a variable assigment." toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="moduleDeps" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="ngmc" value="var $moduleName$ = angular.module('$moduleName$',[$moduleDeps$], function($configDeps$){&#10;    $END$&#10;});" description="A new angular module with a config function" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="moduleDeps" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="configDeps" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngmfa" value="factory('$factoryName$', function($dependencies$){&#10;  $END$&#10;});" description="A factory in a module" toReformat="true" toShortenFQNames="true">
+    <variable name="factoryName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dependencies" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngms" value="service('$serviceName$', function($injectables$) {&#10;    $END$&#10;});" description="Define an Angular Module Service to be attached to a previously defined module. You can change the service name and service injectables." toReformat="true" toShortenFQNames="true">
+    <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="injectables" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="ngmfi" value="filter('$filterName$', function($injectables$) {&#10;    return function(input, $args$) {&#10;        $END$&#10;    };&#10;})" description="Define an Angular Module Filter to be attached to a previously defined module. You can change the filter name." toReformat="true" toShortenFQNames="true">
+    <variable name="filterName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="injectables" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />

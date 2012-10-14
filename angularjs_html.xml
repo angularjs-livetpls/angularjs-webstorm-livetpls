@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="angularjs-html">
+  <template name="ngindex" value="&lt;html&gt;&#10;    &lt;head&gt;&#10;        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/$version$/angular.js&quot;&gt;&lt;/script&gt;&#10;    &lt;/head&gt;&#10;    &lt;body ng-app&gt;&#10;        $END$&#10;    &lt;/body&gt;&#10;&lt;/html&gt;" description="Simple way of bootstraping angular app for prototyping purposes" toReformat="true" toShortenFQNames="true">
+    <variable name="version" expression="" defaultValue="1.0.1" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="ngsa" value="&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/angularjs/$version$/angular$suffix$.js&quot;&gt;&lt;/script&gt;&#10;$END$" description="Script tag importing base AngularJS file from CDN" toReformat="true" toShortenFQNames="true">
+    <variable name="version" expression="" defaultValue="1.0.1" alwaysStopAt="true" />
+    <variable name="suffix" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="ngst" value="&lt;script type=&quot;text/ng-template&quot; id=&quot;$id$&quot;&gt;&#10;    $END$&#10;&lt;/script&gt;" description="A script tag holding Angular's template" toReformat="true" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+    </context>
+  </template>
+  <template name="ngb" value="{{$binding$}}$END$" description="A binding in AngularJS" toReformat="true" toShortenFQNames="true">
+    <variable name="binding" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSP" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
+
