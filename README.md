@@ -9,7 +9,7 @@ Check out the [blog post](http://pkozlowskios.wordpress.com/2012/07/15/live-temp
 ##Installation
 
 ### IntelliJ
-Copy the Live Template xml files into your user's IntelliJ folder. This is typically in `[home directory]/.IntelliJIdea<version>/config/templates`. If IntelliJ is currently open, you will need to restart the IDE.
+Copy the Live Template xml files into your user's IntelliJ folder. This is typically in `[home directory]/.IntelliJIdea<version>/config/templates` or in `~/Library/Preferences/IntelliJIdea<version>/templates` on a Mac. If IntelliJ is currently open, you will need to restart the IDE.
 
 Note: The default Live Template expansion character is TAB. To use a Live Template abbreviation, type the abbreviation and press the expansion character. The Live Template definitions can be found in the Settings Menu (CTRL+ALT+S), IDE Settings, Live Templates, angular.js.
 
