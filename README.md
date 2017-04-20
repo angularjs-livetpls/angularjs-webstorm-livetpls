@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 
 This repository contains LiveTemplates for [AngularJS](http://angularjs.org/) and [Jasmine](https://github.com/pivotal/jasmine) to be used with [JetBrains](http://www.jetbrains.com/) products such as [IntelliJ](http://www.jetbrains.com/idea/) or [WebStorm](http://www.jetbrains.com/webstorm/).
 
@@ -6,7 +6,7 @@ Live Templates are a set of abbreviations that expand in to 'code snippets' for 
 
 Check out the [blog post](http://pkozlowskios.wordpress.com/2012/07/15/live-templates-for-angular-js-in-webstorm/) for more!
 
-##Installation
+## Installation
 
 ### IntelliJ
 Copy the Live Template xml files into your user's IntelliJ folder. This is typically in `[home directory]/.IntelliJIdea<version>/config/templates` or in `~/Library/Preferences/IntelliJIdea<version>/templates` on a Mac. If IntelliJ is currently open, you will need to restart the IDE.
@@ -18,13 +18,13 @@ AFAIK WebStorm doesn't have any particular installation (or import) procedure fo
 Instead just drop `*.xml` files from this repository into WebStorm's folder where it stores LiveTemplates.
 Usually this is the `[your home directory]/.WebIde40/config/templates`.
 
-##How to use the Live Templates
+## How to use the Live Templates
 The following show the available abbrivations and their default implementations. Variables that are editable upon template expansion are delemited with the $ sign (ex. `$filterName$`).
 `$END$` indicates where the cursor will be placed upon template completion.
 
-##Live Templates
-###AngularJS
-####Globals
+## Live Templates
+### AngularJS
+#### Globals
 `ngc` - Define a new Angular Controller. You can change the controller name and parameters.
 
 ```JavaScript
@@ -39,7 +39,7 @@ angular.forEach($iterateOver$, function(value, key){
   $END$
 });
 ```
-####Scope related abbrevations
+#### Scope related abbrevations
 `$f` - Define a new $scope'd function (usually inside an AngularJS Controller). You can change the function name and arguments.
 
 ```JavaScript
@@ -85,7 +85,7 @@ $END$
 $scope.$emit('$eventName$', $eventArgs$);
 $END$
 ```
-####Module related abbrevations
+#### Module related abbrevations
 `ngm` - A new angular module without a config function.
 
 ```JavaScript
@@ -128,7 +128,7 @@ filter('$filterName$', function($injectables$) {
     };
 })
 ```
-####Directives related abbrevations
+#### Directives related abbrevations
 `ngdcf` - A compile function
 
 ```JavaScript
@@ -170,7 +170,7 @@ directive('$directiveName$', function factory($injectables$) {
     }
 });
 ```
-####Routes related abbrevations
+#### Routes related abbrevations
 `ngrw` - Defines a when condition of an AngularJS route.
 
 ```JavaScript
@@ -196,7 +196,7 @@ $routeProvider.when('$url$', {
 $routeProvider.otherwise(redirectTo : '$url$'});
 $END$
 ```
-####HTML - abbrevations to be used in HTML files
+#### HTML - abbrevations to be used in HTML files
 `ngindex` - Simple way of bootstraping angular app for prototyping purposes
 
 ```HTML
@@ -227,8 +227,8 @@ $END$
 ```HTML
 {{$binding$}}$END$
 ```
-###Jasmine
-####Various Jasmine + AngularJS abbrevations
+### Jasmine
+#### Various Jasmine + AngularJS abbrevations
 `jasd` - Jasmine describe template
 
 ```HTML
@@ -270,7 +270,7 @@ it('$should$', inject(function($injectables$) {
     $END$
 }));
 ```
-##Credits
+## Credits
 * [Pawel Kozlowski](https://github.com/pkozlowski-opensource) for initial creation of the Angular JS Live Templates
 * [Jaymes Bearden](https://github.com/jaymes-bearden) expansion, testing and documentation
 * [John Lindquist](https://github.com/johnlindquist) for showing what is possible with a good IDE in his amazing video tutorials
